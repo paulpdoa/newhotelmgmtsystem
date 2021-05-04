@@ -1,0 +1,441 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
+
+.table {
+  width: 80vw;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 300px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  padding: 5px;
+  width: 100px;
+}
+
+.view-customer,
+.view-guest,
+.view-bookings,
+.view-room {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.view-customer:hover,
+.view-guest:hover,
+.view-bookings:hover,
+.view-room:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  font-size: 25px;
+}
+
+.customers-info input {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* adding customer */
+
+.customer-input input {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.submit {
+  width: 200px;
+  align-self: center;
+  border: 1px solid #dbd6d6;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background: #4182cc;
+  color: white;
+}
+
+.counter {
+  font-size: 25px;
+}
+
+.remover,
+.show,
+.view {
+  width: 100px;
+}
+
+.searched-customer,
+.searched-guest,
+.searched-booking,
+.searched-room {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.search-box {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #aca1a1;
+  border-radius: 5px;
+  outline: none;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: black;
+}
+
+.insert-customer-container-main,
+.insert-room-container-main,
+.booking-room-container-main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+.insert-customer-container,
+.insert-room-container,
+.booking-room-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.room-input-container input,
+.room-input-container label,
+.customer-input-container input,
+.customer-input-container label {
+  width: 300px;
+  margin: 5px;
+}
+
+.customer-input input,
+.room-input input {
+  border-radius: 5px;
+  border: 1px solid #9e9696;
+  outline: none;
+  padding: 5px;
+}
+
+.row-one,
+.row-two,
+.row-three,
+.row-four,
+.row-five,
+.row-six {
+  display: flex;
+}
+
+.customers-main-container,
+.guests-main-container {
+  margin: 0 auto;
+  position: absolute;
+  top: 70px;
+}
+
+.insert-guest-container-main,
+.insert-booking-container-main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.insert-guest-container,
+.insert-booking-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.guest-input-container input {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #9e9696;
+  outline: none;
+  padding: 5px;
+}
+
+.guest-input {
+  margin: 10px;
+}
+
+.booking-input input,
+.booking-input select {
+  border: none;
+  border: 1px solid #c2baba;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 200px;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 210px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  border-bottom: 1px solid #e4dcdc;
+  text-decoration: none;
+}
+
+.active {
+  transition: transform 250ms;
+}
+
+.active:hover {
+  transform: translateY(-10px);
+}
+
+.sidebar a.active {
+  background-color: #3490dc;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.card {
+  display: flex;
+}
+
+div.content-container {
+  margin-left: 210px;
+  padding: 1px 16px;
+  height: auto;
+}
+
+.delete-form {
+  position: absolute;
+}
+
+.delete-btn {
+  position: absolute;
+  margin-top: 478px;
+  margin-left: 290px;
+}
+
+.update-container {
+  position: absolute;
+  margin-top: 389px;
+  margin-left: 500px;
+}
+
+.updateguest-container {
+  position: absolute;
+  margin-top: 430px;
+  margin-left: 350px;
+}
+
+.deleteguest-form {
+  position: absolute;
+}
+
+.deleteguest-btn {
+  position: absolute;
+  margin-top: 520px;
+  margin-left: 290px;
+}
+
+.confirm-booking {
+  position: absolute;
+  margin-top: 470px;
+}
+
+.deletebooking-form {
+  position: absolute;
+  margin-top: 521px;
+  margin-left: 520px;
+}
+
+.bookingroom-input {
+  margin: 10px;
+}
+
+.bookingroom-input input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #d3c3c3;
+  outline: none;
+}
+
+.updateroom-container {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 80px;
+}
+
+.updateroom-container .update {
+  width: 150px;
+}
+
+.deleteroom-form {
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 529px;
+}
+
+.deleteroom-btn {
+  width: 150px;
+}
+
+.registration-form-container-main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.registration-form-input {
+  margin: 10px;
+}
+
+.insert-facility-container-main {
+  display: flex;
+  margin: 0 auto;
+}
+
+.insert-facility-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.facility-input input,
+.facility-input select {
+  padding: 5px;
+  width: 500px;
+  outline: none;
+  border: 1px solid #cabbbb;
+  border-radius: 5px;
+}
+
+.facility-input label {
+  padding: 3px;
+  margin: 2px;
+}
+
+.add-facility {
+  margin: 5px;
+}
+
+.border {
+  border: 10px;
+}
+
+.deletefacility-container {
+  position: absolute;
+  margin-left: 525px;
+  margin-top: 339px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar a {
+    float: left;
+  }
+
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
