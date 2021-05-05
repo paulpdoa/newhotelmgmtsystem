@@ -36,8 +36,7 @@
             <td>{{ $record->BookedDate }}</td>
             <td>{{ $record->History }}</td>
             <td><button class="remover submit btn-light">Remove</button></td>
-            <td><a href="{{ route('bookingrooms.show',$record->bookingroomid) }}"><button class="show submit btn-light">View</button></a></td>
-
+            <td><a href="{{ route('bookingrooms.show',$record->booking_room_id) }}"><button class="show submit btn-light">View</button></a></td>
         </tr>
         @endforeach
     </thead>

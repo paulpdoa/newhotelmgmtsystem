@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="booking-room-container-main">
-    <h1>Checked In Customers</h1>
+    <h1>Checked In Customer</h1>
     <input type="hidden" name="bookingid" value="{{ $bookingroom->booking_room_id }}">
 
     <input type="hidden" name="bookingid" value="{{ $bookingroom->booking_id }}">

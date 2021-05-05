@@ -8,7 +8,6 @@
             <form action="{{ route('roomfacilities.search') }}" method="GET">
                 <input class="search-box" type="text" name="search-roomfacility" placeholder="Enter a room name to search">
                 <input class="submit btn-light" type="submit" value="Search">
-                
             </form>
             <div class="buttons">
                 <a class="submit btn-light" href="{{ route('pdfreports.roomfacility') }}">Download PDF</a>

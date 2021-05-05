@@ -33,7 +33,7 @@ class BookingRoomController extends Controller
     // RAW QUERIES \m/
         $records = DB::select(
             "SELECT concat(c.first_name,' ',c.last_name) as customername
-            ,concat(g.first_name,' ',g.last_name) as guestname,br.booking_room_id as bookingroomid,
+            ,concat(g.first_name,' ',g.last_name) as guestname,br.booking_room_id as booking_room_id,
             rt.room_type,pm.payment_method,p.payment_amount,date_format(b.booked_start_date,'%M %D %Y') as BookedDate,
             CASE 
                 WHEN b.booked_start_date < CURDATE() THEN 'Archive'
@@ -80,19 +80,21 @@ class BookingRoomController extends Controller
 
         $search = $req->get('search-bookingroom');
 
-        $records =  Booking::
-        join('customers','bookings.customer_id','=','customers.customer_id')
-        ->join('payments','bookings.booking_id','=','payments.booking_id')
-        ->join('payment_methods','payments.payment_method_id','=','payment_methods.payment_method_id')
-        ->join('booking_rooms','bookings.booking_id','=','booking_rooms.booking_id')
-        ->join('guests','booking_rooms.guest_id','=','guests.guest_id')
-        ->join('rooms','booking_rooms.room_id','=','rooms.room_id')
-        ->join('room_types','rooms.room_type_id','=','room_types.room_type_id')
-        ->select('customers.first_name as customername','customers.last_name as customersurname',
-        'guests.first_name as guestname','guests.last_name as guestsurname',
-        'room_types.room_type','payments.payment_amount',
-        'payment_methods.payment_method','bookings.booked_start_date')
-        ->where('customers.first_name','like','%'.$search.'%')->paginate(5);
+        $records = DB::select(
+            "SELECT concat(c.first_name,' ',c.last_name) as customername
+            ,concat(g.first_name,' ',g.last_name) as guestname,br.booking_room_id as booking_room_id,
+            rt.room_type,pm.payment_method,p.payment_amount,date_format(b.booked_start_date,'%M %D %Y') as BookedDate,
+            CASE 
+                WHEN b.booked_start_date < CURDATE() THEN 'Archive'
+                WHEN b.booked_start_date > CURDATE() THEN 'Future'
+                ELSE 'Present'
+            END AS History   
+            FROM booking_rooms br join bookings b using(booking_id)
+            join guests g using(guest_id) join rooms r using(room_id) join
+            room_types rt using(room_type_id) join payments p using(booking_id)
+            join payment_methods pm using(payment_method_id) join customers c 
+            on b.customer_id = c.customer_id where c.first_name like '%$search%'");
+       
                
         return view('bookingrooms.index',['records' => $records]);
 

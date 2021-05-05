@@ -11,7 +11,7 @@
             <div class="booking-input">
                 <label for="customerid">Customer Name</label><br/>
                 {{-- insert to payments table --}}
-                    <input readonly type="text" value="{{ $bookings->first_name }}">
+                    <input readonly type="text" value="{{ $bookings->first_name }} {{ $bookings->last_name }}">
                    <input readonly type="hidden" name="customerid" value="{{ $bookings->customer_id }}">
             </div>
             <div class="booking-input">

@@ -34,7 +34,7 @@
                 <input type="text" name="roomdescription" value="{{ $rooms->room_description }}">
             </div>
         </div>
-        <div class="updateroom-container">
+        <div class="updateroom-container-one">
             <input type="submit" value="Update" class="submit update btn-light">
         </div>
     </form>

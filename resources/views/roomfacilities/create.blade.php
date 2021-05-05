@@ -10,6 +10,7 @@
                 <label for="roomtypes">Room Type</label><br/>
                 <select name="roomid">
                     @foreach($rooms as $room)
+                    <option value="" disabled selected hidden>Choose Room</option>
                     <option value="{{ $room->room_id }}">{{$room->room_type}}</option>
                     @endforeach
                 </select>
@@ -20,6 +21,7 @@
                 <label for="facilitydesc">Facility Description</label><br/>
                 <select name="roomfacilityid">
                     @foreach($facilityLists as $facilityList)
+                    <option value="" disabled selected hidden>Choose Facility Description</option>
                     <option value="{{ $facilityList->facility_id }}" required>{{$facilityList->facility_description}}</option>
                     @endforeach
                 </select>
