@@ -6,7 +6,6 @@
                <h1>Hotel Records</h1>
                <p>Paul Andres and Renz Mark Olaer</p>
            </div>
-         
            <p>{{ session('mssg') }}</p>
         </div>
       <div class="jumbotron">

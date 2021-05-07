@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     
+    {{-- Icons Fontawesome --}}
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,7 +56,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a style="color:white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    <i class="fas fa-user"></i> {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -80,16 +82,14 @@
                 <center><h3><a class="active" href="{{ url('/') }}">
                     Hotel Management System
                 </a></h3></center>
-                <center>
                     <h4>
-                        <a href="{{ route('customers.index') }}">Customer</a>
-                        <a href="{{ route('guests.index') }}">Guest</a>
-                        <a href="{{ route('rooms.index') }}">Room</a>
-                        <a href="{{ route('bookings.index') }}">Booking</a>
-                        <a href="{{ route('bookingrooms.index') }}">Checked In</a>
-                        <a href="{{ route('roomfacilities.index') }}">Room Facilities</a>
+                        <a href="{{ route('customers.index') }}"><i class="fas fa-male"></i>Customer</a>
+                        <a href="{{ route('guests.index') }}"><i class="fas fa-people-arrows"></i>Guest</a>
+                        <a href="{{ route('rooms.index') }}"><i class="fas fa-bed"></i>Room</a>
+                        <a href="{{ route('bookings.index') }}"><i class="fa fa-book"></i>Booking</a>
+                        <a href="{{ route('bookingrooms.index') }}"><i class="fa fa-check"></i>Checked In</a>
+                        <a href="{{ route('roomfacilities.index') }}"><i class="fa fa-hotel"></i>Room Facilities</a>
                     </h4>
-                </center>
               </div>
             <div class="content-container">
                 @yield('content')

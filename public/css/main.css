@@ -243,7 +243,7 @@ p {
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .sidebar a {
@@ -252,6 +252,10 @@ p {
   padding: 16px;
   border-bottom: 1px solid #e4dcdc;
   text-decoration: none;
+}
+
+.sidebar i {
+  margin: 5px;
 }
 
 .active {

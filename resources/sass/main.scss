@@ -214,7 +214,7 @@ h1,p{
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
   
   .sidebar a {
@@ -223,6 +223,9 @@ h1,p{
     padding: 16px;
     border-bottom:1px solid rgb(228, 220, 220);
     text-decoration: none;
+  }
+  .sidebar i{
+      margin:5px;
   }
   
   .active{
