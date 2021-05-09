@@ -35,6 +35,12 @@
                   <strong><p class="counter card-text" data-target="{{ $bookingroomCount }}">0</p></strong>             
                 </div>
               </div>
+              <div class="card border border-danger"> 
+                <div class="card-body">
+                  <h5 class="card-title">Guest Booked</h5>
+                  <strong><p class="counter card-text" data-target="{{ $guestbooking }}">0</p></strong>             
+                </div>
+              </div>
           </div>
         </div>
         <div class="steps-container">

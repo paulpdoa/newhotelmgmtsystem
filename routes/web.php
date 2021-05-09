@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 use App\Models\Customer;
 use App\Models\Room;
 use App\Models\Guest;
+use App\Models\Booking;
 use App\Models\BookingRoom;
 use App\Models\RoomFacility;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
@@ -34,8 +35,8 @@ Route::get('/', function () {
         'customerCount' => Customer::count(),
         'guestCount' => Guest::count(),
         'roomCount' => Room::count(),
-        'bookingroomCount' => BookingRoom::count(),
-        'customertitle' => 'Customers'
+        'bookingroomCount' => Booking::count(),
+        'guestbooking' => BookingRoom::count('guest_id'),
         ]);
 });
 // Customer Controller

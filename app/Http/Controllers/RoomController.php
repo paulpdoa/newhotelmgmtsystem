@@ -39,7 +39,7 @@ class RoomController extends Controller
                         ->select('rooms.room_id','room_types.room_type_id','room_bands.room_band_id',
                         'room_prices.room_price_id','room_types.room_type',
                         'room_prices.room_price','room_bands.room_description')
-                        ->findOrFail($id);               
+                        ->findOrFail($id);              
                             
         return view('rooms.show',[
             'rooms' => $rooms,
