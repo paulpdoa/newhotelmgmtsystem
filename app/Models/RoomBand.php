@@ -9,5 +9,6 @@ class RoomBand extends Model
 {
     use HasFactory;
     protected $primaryKey='room_band_id';
+    public $keyType = 'string';
     public $timestamps = false;
 }

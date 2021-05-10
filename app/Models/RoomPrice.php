@@ -10,4 +10,5 @@ class RoomPrice extends Model
     use HasFactory;
     protected $primaryKey='room_price_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

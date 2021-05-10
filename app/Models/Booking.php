@@ -11,4 +11,5 @@ class Booking extends Model
     // use this code to override default value where the table creates update at field in database
     public $timestamps = false;
     protected $primaryKey = 'booking_id';
+    public $keyType = 'string';
 }

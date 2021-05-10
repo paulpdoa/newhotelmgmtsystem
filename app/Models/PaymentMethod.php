@@ -10,4 +10,5 @@ class PaymentMethod extends Model
     use HasFactory;
     protected $primayKey = 'payment_method_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

@@ -10,4 +10,5 @@ class RoomType extends Model
     use HasFactory;
     protected $primaryKey='room_type_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

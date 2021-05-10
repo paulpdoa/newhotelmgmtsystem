@@ -10,4 +10,5 @@ class BookingRoom extends Model
     use HasFactory;
     protected $primaryKey = 'booking_room_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

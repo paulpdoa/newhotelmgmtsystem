@@ -10,4 +10,5 @@ class Payment extends Model
     use HasFactory;
     protected $primayKey = 'payment_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

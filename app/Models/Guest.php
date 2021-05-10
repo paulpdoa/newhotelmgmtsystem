@@ -10,4 +10,5 @@ class Guest extends Model
     use HasFactory;
     protected $primaryKey = 'guest_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }

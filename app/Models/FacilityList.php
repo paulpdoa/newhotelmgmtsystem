@@ -10,4 +10,5 @@ class FacilityList extends Model
     use HasFactory;
     protected $primaryKey = 'facility_id';
     public $timestamps = false;
+    public $keyType = 'string';
 }
