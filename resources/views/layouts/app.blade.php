@@ -27,71 +27,51 @@
     <link rel="icon" type="image/png" href="img/favicon.ico"/>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
-            <div class="container">
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-    
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a style="color:white;" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a style="color:white;" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a style="color:white;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fas fa-user"></i> {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+    <nav class="navbar">
+        @guest
+        <div class="login-logout">
+            <div class="login-container">
+                @if(Route::has('login'))
+                <a href="{{ route('login') }}"><strong>Login</strong></a>
+                @endif
             </div>
-        </nav>
-    </div>
+           <div class="logout-container">
+                @if(Route::has('register'))
+                <a href="{{ route('register') }}"><strong>Register</strong></a>
+                @endif
+           </div>  
+        </div>
+        <div class="username">
+            <div class="user-container">
+                @else
+                <h5 class="user"><i class="fas fa-user"></i>{{ Auth::user()->name }}</h5>
+            </div>
+            <div class="logout">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="submit btn-dark">Logout</button>
+                </form>
+            </div>
+        </div>
+        @endguest
+        <i style="color:black;" class="fas fa-bars menu"></i>
+        <div class="nav-button">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="/"><i class="fas fa-address-book"></i>About</a></li>
+                <li><a href="/"><i class="fas fa-info-circle"></i>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
         <div class="py-4 main-container">
             <div class="sidebar">
                 <h4><a class="active" href="{{ url('/') }}">
                     Hotel Management System
                 </a></h4>
                     <h4>
-                        <a href="{{ route('customers.index') }}"><i class="fas fa-male"></i>Customer</a>
-                        <a href="{{ route('guests.index') }}"><i class="fas fa-people-arrows"></i>Guest</a>
-                        <a href="{{ route('rooms.index') }}"><i class="fas fa-bed"></i>Room</a>
-                        <a href="{{ route('bookings.index') }}"><i class="fa fa-book"></i>Booking</a>
-                        <a href="{{ route('bookingrooms.index') }}"><i class="fa fa-check"></i>Checked In</a>
-                        <a href="{{ route('roomfacilities.index') }}"><i class="fa fa-hotel"></i>Room Facilities</a>
+                        <a href="/"><i class="fas fa-home"></i>Home</a>
+                        <a href="About"><i class="fas fa-address-book"></i>About</a>
+                        <a href="Contact"><i class="fas fa-info-circle"></i>Contact</a>
                     </h4>
               </div>
             <div class="content-container">
@@ -99,6 +79,29 @@
                 
             </div>
         </div>
+<script>
+    const menu = document.querySelector('.menu');
+    const nav = document.querySelector('.nav-button');
 
+    const user = document.querySelector('.user');
+
+    menu.addEventListener('click',() => {
+        if(nav.style.display === 'block'){
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'block  ';
+        }
+    })
+
+    user.addEventListener('click',() => {
+        const logout = document.querySelector('.logout');
+        if(logout.style.display === 'block'){
+            logout.style.display = 'none';
+        } else {
+            logout.style.display = 'block';
+        }
+    })
+
+</script>
 </body>
 </html>

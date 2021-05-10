@@ -81,14 +81,14 @@
             </div>
         </div>
         <div class="confirm-booking">
-            <input type="submit" value="Confirm Booking" class="submit">
+            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
         
     </form>
     <form class="deletebooking-form" action={{ route('bookings.destroy', $bookings->booking_id) }} method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" class="submit deletebooking-btn" value="Delete">
+        <button class="submit delete-btn delete delete-booking"><i class="fas fa-trash"></i>Delete</button>
     </form>
 </div>
 

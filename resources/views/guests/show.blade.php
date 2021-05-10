@@ -57,14 +57,14 @@
         </div>
       
         <div class="updateguest-container">
-            <input class="submit" type="submit" value="Update">
+            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
         
     </form>
     <form class="deleteguest-form" action={{ route('guests.destroy', $guests->guest_id) }} method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" class="submit deleteguest-btn" value="Delete">
+        <button class="submit delete-btn delete delete-guest"><i class="fas fa-trash"></i>Delete</button>
     </form>
 </div>
 

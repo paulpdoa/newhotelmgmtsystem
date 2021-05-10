@@ -71,7 +71,7 @@
                 </select>
             </div>
         </div> --}}
-        <input type="submit" value="Book Now" class="submit">
+        <button class="submit update"><i class="fa fa-edit"></i>Book Now</button>
     </form>
 </div>
 

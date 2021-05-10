@@ -7,7 +7,8 @@
 
 body {
   font-family: "Mulish", sans-serif;
-  background: linear-gradient(to top, #6699ff 0%, #ffffff 93%);
+  background: #becde3;
+  background: linear-gradient(193deg, #becde3 13%, #91c1db 60%);
   margin: 0;
 }
 
@@ -54,6 +55,10 @@ body {
   text-align: center;
   padding: 5px;
   width: 100px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 .view-customer,
@@ -158,6 +163,9 @@ body {
 h1,
 p {
   text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .insert-customer-container,
@@ -271,9 +279,9 @@ p {
 }
 
 .sidebar a.active {
-  background-color: #3490dc;
-  color: white;
   text-transform: uppercase;
+  font-weight: bold;
+  background: #e3f3f2;
 }
 
 .sidebar a:hover:not(.active) {
@@ -288,7 +296,7 @@ p {
 div.content-container {
   margin-left: 210px;
   padding: 1px 16px;
-  height: auto;
+  height: 100vh;
 }
 
 .delete-form {
@@ -305,6 +313,15 @@ div.content-container {
   position: absolute;
   margin-top: 389px;
   margin-left: 500px;
+}
+
+.delete-guest {
+  margin-top: 520px;
+  margin-left: 400px;
+}
+
+.delete-booking {
+  margin-top: 2px;
 }
 
 .updateguest-container {
@@ -326,12 +343,13 @@ div.content-container {
 .confirm-booking {
   position: absolute;
   margin-top: 470px;
+  margin-left: 50px;
 }
 
 .deletebooking-form {
   position: absolute;
-  margin-top: 521px;
-  margin-left: 520px;
+  margin-top: 519px;
+  margin-left: 290px;
 }
 
 .bookingroom-input {
@@ -431,6 +449,10 @@ div.content-container {
   margin-top: 339px;
 }
 
+.go-record {
+  width: 200px;
+}
+
 .delete {
   background: #f12f2f;
 }
@@ -446,7 +468,7 @@ div.content-container {
 }
 
 .count-body {
-  background: whitesmoke;
+  background: #f3eded;
   display: flex;
   justify-content: space-evenly;
   padding: 25px;
@@ -454,7 +476,7 @@ div.content-container {
   width: 400px;
   height: 200px;
   border-radius: 10px;
-  box-shadow: 5px 10px #555;
+  box-shadow: 5px 10px #7c7979;
   cursor: pointer;
   transition: transform 250ms;
 }
@@ -469,7 +491,58 @@ div.content-container {
 
 .count-container a {
   text-decoration: none;
+  color: #4d4949;
+}
+
+.count-container p {
+  color: #4d4949;
+}
+
+.count-container h5 {
+  font-weight: 900;
+  font-size: 23px;
+}
+
+.navbar {
+  background: #F4FAFF;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-button {
+  display: none;
+}
+
+.login-logout {
+  display: flex;
+}
+
+.menu {
+  display: none;
+}
+
+.login-container,
+.logout-container {
+  padding: 10px;
+}
+
+.login-container a,
+.logout-container a {
+  text-decoration: none;
   color: black;
+}
+
+.user {
+  color: black;
+  cursor: pointer;
+}
+
+.logout {
+  position: absolute;
+  display: none;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 700px) {
@@ -502,6 +575,53 @@ div.content-container {
 
   div.content-container {
     margin-left: auto;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-button {
+    background: #d7e2f0;
+    background: radial-gradient(circle, #d7e2f0 9%, #5b6662 33%, #dbd9d9 65%, #9ea7bf 85%);
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 25px;
+    width: 400px;
+    position: absolute;
+    display: none;
+  }
+
+  .nav-button li {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-button li a {
+    padding: 10px;
+    width: 900px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: block;
+    border: 1px solid #d1c5c5;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .user {
+    color: black;
+  }
+
+  .logout {
+    margin-right: 100px;
   }
 }
 

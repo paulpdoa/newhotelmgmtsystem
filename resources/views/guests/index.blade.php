@@ -11,14 +11,14 @@
             
         </form>
         <div class="buttons">
-            <a href="{{ route('pdfreports.guest') }}" class="submit">Download PDF</a>
-            <a href="{{ route('guests.index') }}" class="submit">Refresh</a>
-            <a href="{{ route('guests.create') }}" class="submit">Add Guest</a>
+            <a href="{{ route('pdfreports.guest') }}" class="submit btn-light">Download PDF</a>
+            <a href="{{ route('guests.index') }}" class="submit btn-light">Back to List</a>
+            <a href="{{ route('guests.create') }}" class="submit btn-light">Add Guest</a>
         </div>
     </div>
     <div class="table-wrapper-scroll-y my-custom-scrollbar">
-    <table class="table table-info">
-        <thead class="thead-light">
+    <table class="table table-light">
+        <thead class="thead-dark">
         <tr>
             <th>Title</th>
             <th>First Name</th>
@@ -40,8 +40,8 @@
             <td>{{ $guest->street }} {{ $guest->town }}, {{ $guest->province }}</td>
             <td>{{ $guest->postal_code }}</td>
             <td>{{ $guest->contact_number }}</td>
-            <td><button class="remover submit btn-light">Remove</button></td>
-            <td><a class="view-guest" href="{{ route('guests.show', $guest->guest_id) }}"><button class="show submit btn-light">View</button></a></td>
+            <td><button class="remover submit btn-danger"><i class="fas fa-trash"></i>Remove</button></td>
+            <td><a class="view-guest" href="{{ route('guests.show', $guest->guest_id) }}"><button class="show submit btn-primary"><i class="fa fa-eye"></i>View</button></a></td>
         </tr>
         @endforeach
         </tbody>

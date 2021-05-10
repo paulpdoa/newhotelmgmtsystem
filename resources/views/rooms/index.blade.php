@@ -12,14 +12,14 @@
             </form>
             <div class="buttons">
                 <a class="submit btn-light" href="{{ route('pdfreports.room') }}">Download PDF</a>
-                <a class="submit btn-light" href="{{ route('rooms.index') }}">Refresh</a>
+                <a class="submit btn-light" href="{{ route('rooms.index') }}">Back to List</a>
                 <a class="submit btn-light" href="{{ route('rooms.create') }}">Add Room</a>
                 <a class="submit btn-light" href="{{ route('roomfacilities.create') }}">Add Facility</a>
             </div>
         </div>
         <div class="table-wrapper-scroll-y my-custom-scrollbar">
-        <table class="table table-info">
-            <thead class="thead-light">
+        <table class="table table-light">
+            <thead class="thead-dark">
             <tr>
             
                 <th>Room Type</th>

@@ -30,8 +30,8 @@
         </div>
     </div>
     <div class="table-wrapper-scroll-y my-custom-scrollbar">
-    <table class="table table-info">
-        <thead class="thead-light">
+    <table class="table table-light">
+        <thead class="thead-dark">
         <tr>
             <th>Title</th>
             <th>First Name</th>
