@@ -2,14 +2,49 @@
 @section('content')
 
         <div class="content">
-           <div class="hotel-management-title">
-               <h1>Hotel Records</h1>
-               <p>Paul Andres and Renz Mark Olaer</p>
-           </div>
+           <h1>Hotel Management Records</h1>
            <p>{{ session('mssg') }}</p>
         </div>
-      <div class="jumbotron">
-        <div class="card-group">
+      <div class="count-container">
+          <a href="{{route('customers.index')}}">
+            <div class="count-body">
+              <img class="count-image" src="/img/customer.png" alt="customer">
+              <div class="counts">
+                <h5 class="card-title">Customer</h5>
+                <strong><p class="counter card-text" data-target="{{ $customerCount }}" >0</p></strong>
+              </div>
+            </div>
+          </a>
+          <div class="count-body">
+            <img class="count-image" src="/img/guest.png" alt="guest">
+            <div class="counts">
+              <h5 class="card-title">Guest</h5>
+              <strong><p class="counter card-text" data-target="{{ $guestCount }}">0</p></strong> 
+            </div>
+          </div>
+          <div class="count-body">
+            <img class="count-image" src="/img/room.png" alt="room">
+            <div class="counts">
+              <h5 class="card-title">Room</h5>
+              <strong><p class="counter card-text" data-target="{{ $roomCount }}">0</p></strong> 
+            </div>     
+          </div>
+          <div class="count-body">
+            <img class="count-image" src="/img/booking.png" alt="booking">
+            <div class="counts">
+              <h5 class="card-title">Booking</h5>
+              <strong><p class="counter card-text" data-target="{{ $bookingroomCount }}">0</p></strong> 
+            </div> 
+          </div>
+          <div class="count-body">
+            <img class="count-image" src="/img/booked.png" alt="booked">
+            <div class="counts">
+              <h5 class="card-title">Guest Booked</h5>
+              <strong><p class="counter card-text" data-target="{{ $guestbooking }}">0</p></strong> 
+            </div> 
+          </div>
+     
+        {{-- <div class="card-group">
             <div class="card border border-primary">
               <div class="card-body">
                 <h5 class="card-title">Customer</h5>
@@ -41,15 +76,7 @@
                   <strong><p class="counter card-text" data-target="{{ $guestbooking }}">0</p></strong>             
                 </div>
               </div>
-          </div>
-        </div>
-        <div class="steps-container">
-          <div class="card border-info mb-3">
-            <div class="card-body">
-              <h5 class="card-title">Hotel Management Project</h5>
-              <p class="card-text">This is a project in database which we will use to show customer, guest, rooms, and booking records in this website using MySQL and PHP with the help of Laravel Framework.</p>
-            </div>
-          </div>
+          </div> --}}
         </div>
         
         <script>

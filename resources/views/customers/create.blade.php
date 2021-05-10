@@ -65,8 +65,7 @@
                 <input required style="width:50vw;" type="email" name="email" placeholder="Enter Email Address">
             </div>
         </div>
-
-        <input class="submit" type="submit" value="Submit">
+        <button class="submit btn-success"><i class='far fa-hand-point-right'></i>Insert</button>
     </form>
 </div>
 

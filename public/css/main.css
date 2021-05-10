@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap);
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +6,8 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Mulish", sans-serif;
+  background: linear-gradient(to top, #6699ff 0%, #ffffff 93%);
   margin: 0;
 }
 
@@ -98,9 +100,11 @@ body {
 }
 
 .submit {
-  width: 200px;
+  width: 100px;
   align-self: center;
   border: 1px solid #dbd6d6;
+  color: white;
+  font-weight: 900;
   border-radius: 5px;
   padding: 5px;
   transition: 0.4s;
@@ -270,7 +274,6 @@ p {
   background-color: #3490dc;
   color: white;
   text-transform: uppercase;
-  font-weight: 800;
 }
 
 .sidebar a:hover:not(.active) {
@@ -363,8 +366,8 @@ div.content-container {
 
 .deleteroom-form {
   position: absolute;
-  margin-top: 300px;
-  margin-left: 529px;
+  margin-top: -177px;
+  margin-left: 250px;
 }
 
 .deleteroom-btn {
@@ -428,6 +431,47 @@ div.content-container {
   margin-top: 339px;
 }
 
+.delete {
+  background: #f12f2f;
+}
+
+.update {
+  background: green;
+}
+
+.count-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.count-body {
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+  margin: 10px;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #555;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+.count-body:hover {
+  transform: translateY(-10px);
+}
+
+.count-image {
+  width: 180px;
+}
+
+.count-container a {
+  text-decoration: none;
+  color: black;
+}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -448,6 +492,16 @@ div.content-container {
   .sidebar a {
     text-align: center;
     float: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  div.content-container {
+    margin-left: auto;
   }
 }
 

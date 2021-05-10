@@ -22,6 +22,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+    {{-- head icon --}}
+    <link rel="icon" type="image/png" href="img/favicon.ico"/>
 </head>
 <body>
     <div id="app">
@@ -79,9 +82,9 @@
     </div>
         <div class="py-4 main-container">
             <div class="sidebar">
-                <center><h3><a class="active" href="{{ url('/') }}">
+                <h4><a class="active" href="{{ url('/') }}">
                     Hotel Management System
-                </a></h3></center>
+                </a></h4>
                     <h4>
                         <a href="{{ route('customers.index') }}"><i class="fas fa-male"></i>Customer</a>
                         <a href="{{ route('guests.index') }}"><i class="fas fa-people-arrows"></i>Guest</a>

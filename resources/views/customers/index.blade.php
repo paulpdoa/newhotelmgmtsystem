@@ -20,12 +20,12 @@
     <div class="searched-customer">
         <form action="{{ route('customers.search') }}" method="GET">
             <input class="search-box" type="text" name="search-customer" placeholder="Enter a name to search">
-            <input class="submit btn-light" type="submit" value="Search">
+            <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>
             
         </form>
         <div class="buttons">
             <a class="submit btn-light" href="{{ route('pdfreports.customer') }}">Download PDF</a>
-            <a class="submit btn-light" href="{{ route('customers.index') }}">Refresh</a>
+            <a class="submit btn-light" href="{{ route('customers.index') }}">Back to List</a>
             <a class="submit btn-light" href="{{ route('customers.create') }}">Add Customer</a>
         </div>
     </div>
@@ -36,11 +36,11 @@
             <th>Title</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Date of Birth</th>
             <th>Address</th>
             <th>Postal Code</th>
             <th>Mobile Phone</th>
             <th>Email Address</th>
+            <th>Booked Time</th>
             <th colspan="2">Action</th>
         </tr>
     </thead>
@@ -50,13 +50,13 @@
             <td>{{ $client->title }}</td>
             <td>{{ $client->first_name }}</td>
             <td>{{ $client->last_name }}</td>
-            <td>{{ $client->dob }}</td>
             <td>{{ $client->street }} {{ $client->town }}, {{ $client->province }}</td>
             <td>{{ $client->postal_code }}</td> 
             <td>{{ $client->mobile_phone }}</td>
             <td>{{ $client->email }}</td>
-            <td><button class="remover submit btn-light">Remove</button></td>
-            <td><a class="view-customer" href="{{ route('customers.show', $client->customer_id) }}"><button class="show submit btn-light">View</button></a></td>
+            <td>{{ $client->created_at }}</td>
+            <td><button class="remover submit btn-danger"><i class="fas fa-trash"></i>Remove</button></td>
+            <td><a class="view-customer" href="{{ route('customers.show', $client->customer_id) }}"><button class="show submit btn-primary"><i class="fa fa-eye"></i>View</button></a></td>
         </tr>
         
         @endforeach

@@ -1,6 +1,7 @@
 <div class="pdf-container">
     <h1>List of Rooms</h1>
     <p>Hotel Management System</p>
+    <hr/>
     <table border="1" style="border-collapse: collapse;" width="100%;">
         <tr>
             <th>Room Type</th>

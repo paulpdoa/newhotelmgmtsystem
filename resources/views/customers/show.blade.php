@@ -69,13 +69,13 @@
             </div>
         </div>
         <div class="update-container">
-            <input class="submit" type="submit" value="Update">
+            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
     </form>
     <form class="delete-form" action={{ route('customers.destroy', $customer->customer_id) }} method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" class="submit delete-btn" value="Delete">
+        <button class="submit delete-btn delete"><i class="fas fa-trash"></i>Delete</button>
     </form>
 </div>
 

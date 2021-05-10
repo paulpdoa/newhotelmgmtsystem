@@ -2,6 +2,7 @@
     <h1>List of Room Facility</h1>
     <p>Hotel Management System</p>
     Room Facilities
+    <hr/>
     <table border="1" style="border-collapse: collapse;" width="100%;">
         <tr>
             <th>Room Type</th>

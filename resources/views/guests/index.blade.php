@@ -7,7 +7,7 @@
     <div class="searched-guest">
         <form action="{{ route('guests.search')}}" method="GET">
             <input class="search-box" type="text" name="search-guest" placeholder="Enter a name to search">
-            <input class="submit btn-light" type="submit" value="Search">
+            <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>
             
         </form>
         <div class="buttons">

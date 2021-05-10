@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="updateroom-container-one">
-            <input type="submit" value="Update" class="submit update btn-light">
+            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
     </form>
 
@@ -61,7 +61,7 @@
     <form class="deleteroom-form" action={{ route('rooms.destroy', $rooms->room_id) }} method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" class="submit btn-light deleteroom-btn" value="Delete">
+        <button class="submit delete-btn delete deleteroom-btn"><i class="fas fa-trash"></i>Delete</button>
     </form>
 </div>
 

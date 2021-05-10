@@ -22,7 +22,8 @@
             <th>Room Type</th>
             <th>Payment Method</th>
             <th>Payment Amount</th>
-            <th>Booked Date</th>
+            <th>Booked Start Date</th>
+            <th>Booked End Date</th>
             <th>Time Record</th>
             <th colspan="2">Action</th>
         </tr>
@@ -34,6 +35,7 @@
             <td>{{ $record->payment_method }}</td>
             <td>{{ $record->payment_amount }}</td>
             <td>{{ $record->BookedDate }}</td>
+            <td>{{ $record->EndDate }}</td>
             <td>{{ $record->History }}</td>
             <td><button class="remover submit btn-light">Remove</button></td>
             <td><a href="{{ route('bookingrooms.show',$record->booking_room_id) }}"><button class="show submit btn-light">View</button></a></td>

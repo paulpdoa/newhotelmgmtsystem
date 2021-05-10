@@ -35,6 +35,7 @@ class BookingRoomController extends Controller
             "SELECT concat(c.first_name,' ',c.last_name) as customername
             ,concat(g.first_name,' ',g.last_name) as guestname,br.booking_room_id as booking_room_id,
             rt.room_type,pm.payment_method,p.payment_amount,date_format(b.booked_start_date,'%M %D %Y') as BookedDate,
+            date_format(b.booked_end_date,'%M %D %Y') as EndDate,
             CASE 
                 WHEN b.booked_start_date < CURDATE() THEN 'Archive'
                 WHEN b.booked_start_date > CURDATE() THEN 'Future'

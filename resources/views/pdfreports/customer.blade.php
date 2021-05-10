@@ -2,6 +2,7 @@
     <div class="pdf-container">
         <h1>List of Customers</h1>
         <p>Hotel Management System</p>
+        <hr/>
         <table border="1" style="border-collapse: collapse;" width="100%;">
             <tr>
                 <th>Profession</th>
