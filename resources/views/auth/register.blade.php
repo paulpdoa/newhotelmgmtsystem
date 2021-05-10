@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         
-                                <center><button type="submit" class="btn submit btn-light">
+                                <center><button type="submit" class="btn submit btn-primary">
                                     Register
                                 </button></center>
                             </div>
