@@ -57,7 +57,7 @@
             </div>
             <div class="booking-input">
                 <label for="totalpaymentduedate">Total Payment Due Date</label><br/>
-                <input class="payment" type="date" name="totalpaymentduedate" value="{{ $bookings->total_payment_due_date }}">  
+                <input class="payment paymentdue" type="date" name="totalpaymentduedate" value="{{ $bookings->total_payment_due_date }}">  
             </div>
         </div>
         <div class="booking-input-container row-five">
@@ -73,7 +73,7 @@
         <div class="booking-input-container row-five">
             <div class="booking-input">
                 <label for="paymentmethod">Payment Method</label><br/>
-                <select style="width:410px;" name="paymentmethodid">
+                <select class="paymentmethod" name="paymentmethodid">
                     @foreach($paymentMethods as $paymentMethod)    
                     <option value="" disabled selected hidden>Choose Payment Method</option>
                     <option value="{{ $paymentMethod->payment_method_id }}">{{ $paymentMethod->payment_method }}</option>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="confirm-booking">
-            <button class="submit update"><i class="fa fa-edit"></i>Book Now</button>
+            <button class="submit update booknow-btn"><i class="fa fa-edit"></i>Book Now</button>
         </div>
         
     </form>

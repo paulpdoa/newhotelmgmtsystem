@@ -294,7 +294,7 @@ p{
 }
 .delete-btn{
     position:absolute;
-    margin-top:490px;
+    margin-top:525px;
     margin-left:290px;
 }
 .update-container{
@@ -307,7 +307,7 @@ p{
     margin-left:400px;
 }
 .delete-booking{
-    margin-top:2px;
+    margin-top:37px;
     
 }
 .facility-add{
@@ -321,11 +321,12 @@ p{
 }  
 .deleteguest-form{
     position:absolute;
+    
 }
-.deleteguest-btn{
+.delete-guest{
     position:absolute;
-    margin-top:520px;
-    margin-left:290px;
+    margin-top:564px;
+    margin-left:350px;
 }
 // for bookings buttons
 .confirm-booking{
@@ -367,7 +368,7 @@ p{
 }
 .deleteroom-form{
     position:absolute;
-    margin-top:-177px;
+    margin-top:-212px;
     margin-left:232px;
 }
 .deleteroom-btn{
@@ -555,7 +556,18 @@ p{
 .available-box:hover{
     transform: translateY(-10px);
 }
-
+.booking-input .customer-name{
+    width:410px;
+}
+.booking-input .payment{
+    width:410px;
+}
+.booking-input .paymentmethod{
+    width:410px;
+}
+.booking-input .paymentdue{
+    width:200px;
+}
 
   @media screen and (max-width: 700px) {
     .sidebar {
@@ -615,7 +627,8 @@ p{
     }
     .searched-customer input,
     .searched-guest input,
-    .searched-room input{
+    .searched-room input,
+    .searched-booking input{
         width:200px;
     }
     .buttons{
@@ -664,7 +677,7 @@ p{
     }
     .delete-form{
         position: absolute;
-        margin-top:617px;
+        margin-top:618px;
         margin-left:-220px;
     }
     // guest insert
@@ -685,13 +698,16 @@ p{
     }
     .deleteguest-form{
         position:absolute;
-        margin-top:413px;
-        margin-left:-350px;
+        margin-top:415px;
+        margin-left:-290px;
     }
     // show room
     .updateroom-container-one{
         position:absolute;
         margin-top:240px;
+    }
+    .deleteroom-btn{
+        margin-top:490px;
     }
     // facilities
     .facility-input input,
@@ -701,6 +717,35 @@ p{
     .available-box{
         width:300px;
         margin:10px;
+    }
+    // bookings
+    .booking-input input,
+    .booking-input select{
+        width:300px;
+    }
+    .insert-booking-container{
+        margin-left:30px;
+    }
+    .booknow{
+        position:absolute;
+        margin-top:730px;
+        margin-left:-20px;
+    }
+    // show booking
+    .booking-input .payment{
+        width:300px;
+    }
+    .booking-input .paymentmethod{
+        width:300px;
+    }
+    .confirm-booking{
+        position:absolute;
+        margin-top:830px;
+    }
+    .deletebooking-form{
+        position:absolute;
+        margin-top:944px;
+        margin-left:-80px;
     }
   }
     

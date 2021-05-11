@@ -76,7 +76,7 @@
     <form class="delete-form" action={{ route('customers.destroy', $customer->customer_id) }} method="POST">
         @csrf
         @method('DELETE')
-        <button class="submit delete-btn delete"><i class="fas fa-trash"></i>Delete</button>
+        <button class="submit delete-btn delete delete-customer"><i class="fas fa-trash"></i>Delete</button>
     </form>
 </div>
 

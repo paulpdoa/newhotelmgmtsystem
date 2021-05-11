@@ -9,7 +9,7 @@
         <div class="booking-input-container row-one">
             <div class="booking-input">
                 <label for="customername">Customer Name</label><br/>
-                <select style="width:410px;" name="customerid">
+                <select class="customer-name" name="customerid">
                     @foreach($customers as $customer)
                     <option value="" disabled selected hidden>Choose Customer</option>
                     <option value="{{ $customer->customer_id }}">{{ $customer->first_name }} {{ $customer->last_name }}</option>
@@ -49,7 +49,7 @@
             </div> --}}
             <div class="booking-input">
                 <label for="totalpaymentduedate">Total Payment Due Date</label><br/>
-                <input required style="width:410px;" class="payment" type="date" name="totalpaymentduedate">  
+                <input required class="payment" type="date" name="totalpaymentduedate">  
             </div>
         </div>
         <div class="booking-input-container row-five">
@@ -72,7 +72,7 @@
                 </select>
             </div>
         </div> --}}
-        <button class="submit update"><i class="fa fa-edit"></i>Book Now</button>
+        <button class="submit update booknow"><i class="fa fa-edit"></i>Book Now</button>
     </form>
 </div>
 
