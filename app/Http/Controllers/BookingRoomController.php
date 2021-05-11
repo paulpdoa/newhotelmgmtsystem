@@ -134,7 +134,7 @@ class BookingRoomController extends Controller
         $availables = DB::select("
         SELECT rt.room_type,br.room_id,r.room_id,
             CASE 
-                WHEN br.room_id THEN 'Occupied'
+                WHEN br.room_id > 0 THEN 'Occupied'
                 ELSE 'Vacant'
             END AS Vacancy
             FROM booking_rooms br right join rooms r using(room_id) right join room_types rt using(room_type_id)
