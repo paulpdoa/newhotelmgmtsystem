@@ -58,8 +58,8 @@
         <div class="nav-button">
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="/"><i class="fas fa-address-book"></i>About</a></li>
-                <li><a href="/"><i class="fas fa-info-circle"></i>Contact</a></li>
+                <li><a href="{{ route('sidebars.about') }}"><i class="fas fa-address-book"></i>About</a></li>
+                <li><a href="{{ route('sidebars.contact') }}"><i class="fas fa-info-circle"></i>Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -70,8 +70,8 @@
                 </a></h4>
                     <h4>
                         <a href="/"><i class="fas fa-home"></i>Home</a>
-                        <a href="About"><i class="fas fa-address-book"></i>About</a>
-                        <a href="Contact"><i class="fas fa-info-circle"></i>Contact</a>
+                        <a href="{{ route('sidebars.about') }}"><i class="fas fa-address-book"></i>About</a>
+                        <a href="{{ route('sidebars.contact') }}"><i class="fas fa-info-circle"></i>Contact</a>
                     </h4>
               </div>
             <div class="content-container">

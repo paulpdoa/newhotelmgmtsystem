@@ -42,6 +42,17 @@ Route::get('/', function () {
         'availableroom' => Room::max('room_id') - BookingRoom::count('room_id'),
         ]);
 });
+
+// about me and contact
+
+Route::get('/about',function() {
+    return view('sidebars.about');
+})->name('sidebars.about');
+
+Route::get('/contact',function(){
+    return view('sidebars.contact');
+})->name('sidebars.contact');
+
 // Customer Controller
 
 Route::get('/customers',[CustomerController::class,'index'])->name('customers.index');    

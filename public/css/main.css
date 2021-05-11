@@ -645,6 +645,104 @@ div.content-container {
   width: 200px;
 }
 
+.about-subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-box {
+  background: whitesmoke;
+  border-radius: 5px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 200px;
+  align-self: center;
+}
+
+.about-info {
+  align-self: center;
+}
+
+.about-info p {
+  align-self: center;
+}
+
+.contact-subcontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+}
+
+.contact-img,
+.contact-name {
+  align-self: center;
+}
+
+.contact-box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-socmed {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fb-box button {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+  background: #247ce2;
+  transition: 0.4s;
+}
+
+.fb-box button:hover {
+  color: black;
+  background: lightcyan;
+}
+
+.ig-box button {
+  color: white;
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
+  border: none;
+  border-radius: 4px;
+  width: 120px;
+  transition: 0.4s;
+}
+
+.ig-box button:hover {
+  color: black;
+  background: lightcyan;
+}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
