@@ -69,6 +69,15 @@
               </div>
             </div>
           </a>
+          <a href="{{ route('roomfacilities.index') }}">
+            <div class="count-body">
+              <img class="count-image" src="/img/roomfacility.png" alt="roomfacility">
+              <div class="counts">
+                <h5 class="card-title">Room Facilities</h5>
+                <strong><p class="counter card-text" data-target="{{ $roomfacility }}" >0</p></strong>
+              </div>
+            </div>
+          </a>
         </div>
         
         <script>

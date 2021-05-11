@@ -19,6 +19,8 @@ use App\Models\Guest;
 use App\Models\Booking;
 use App\Models\BookingRoom;
 use App\Models\PaymentMethod;
+use App\Models\RoomFacility;
+
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,7 @@ Route::get('/', function () {
         'bookingroomCount' => Booking::count(),
         'guestbooking' => BookingRoom::count('guest_id'),
         'paymentmethod' => PaymentMethod::count(),
+        'roomfacility' => RoomFacility::count(),
         'availableroom' => Room::max('room_id') - BookingRoom::count('room_id'),
         ]);
 });
