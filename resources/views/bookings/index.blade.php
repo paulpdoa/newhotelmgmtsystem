@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="bookings-main-container">
+    <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <h1>Booking Record</h1>
     <p>records of bookings in hotel</p>
     <div class="searched-booking">

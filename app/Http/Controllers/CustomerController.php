@@ -18,7 +18,7 @@ class CustomerController extends Controller
     public function index(){
 
         $customer = DB::select("
-        SELECT customer_id,title,first_name,last_name,date_format(date_of_birth,'%M %D %Y') as dob,
+        SELECT customer_id,title,first_name,last_name,date_of_birth,
         town,street,province,postal_code,home_phone,work_phone,mobile_phone,email,created_at 
         FROM CUSTOMERS
         ");

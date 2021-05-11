@@ -16,7 +16,7 @@ class GuestController extends Controller
 
     public function index(){
         $guests = DB::select("
-        SELECT guest_id,title,first_name,last_name,date_format(date_of_birth,'%M %D %Y') as dob,
+        SELECT guest_id,title,first_name,last_name,date_of_birth,
         street,town,province,postal_code,contact_number from guests
         ");
 

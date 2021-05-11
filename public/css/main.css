@@ -605,6 +605,29 @@ div.content-container {
   margin-left: 99px;
 }
 
+.available-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.available-box {
+  padding: 50px;
+  width: 300px;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 5px 10px #7c7979;
+  transition: transform 250ms;
+}
+
+.available-box h1 {
+  font-size: 30px;
+}
+
+.available-box:hover {
+  transform: translateY(-10px);
+}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -673,7 +696,8 @@ div.content-container {
   }
 
   .searched-customer input,
-  .searched-guest input {
+  .searched-guest input,
+  .searched-room input {
     width: 200px;
   }
 
@@ -760,6 +784,21 @@ div.content-container {
     position: absolute;
     margin-top: 413px;
     margin-left: -350px;
+  }
+
+  .updateroom-container-one {
+    position: absolute;
+    margin-top: 240px;
+  }
+
+  .facility-input input,
+  .facility-input select {
+    width: 300px;
+  }
+
+  .available-box {
+    width: 300px;
+    margin: 10px;
   }
 }
 

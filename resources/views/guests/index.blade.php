@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="guests-main-container">
+    <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <h1>Guest Record</h1>
     <p>records of guest in hotel</p>
     <div class="searched-guest">
@@ -36,7 +37,7 @@
             <td>{{ $guest->title }}</td>
             <td>{{ $guest->first_name }}</td>
             <td>{{ $guest->last_name }}</td>
-            <td>{{ $guest->dob }}</td>
+            <td>{{ $guest->date_of_birth }}</td>
             <td>{{ $guest->street }} {{ $guest->town }}, {{ $guest->province }}</td>
             <td>{{ $guest->postal_code }}</td>
             <td>{{ $guest->contact_number }}</td>

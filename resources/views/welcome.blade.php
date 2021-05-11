@@ -60,7 +60,7 @@
               </div> 
             </div>
           </a>
-          <a href="">
+          <a href="{{ route('availablerooms.index') }}">
             <div class="count-body">
               <img class="count-image" src="/img/availableroom.png" alt="availableroom">
               <div class="counts">

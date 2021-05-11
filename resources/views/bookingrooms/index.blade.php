@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
 <h1>Customers Checked In </h1>
 <p>records of customers checked in</p>
 <div class="searched-room">
@@ -34,8 +34,8 @@
             <td>{{ $record->room_type }}</td>
             <td>{{ $record->payment_method }}</td>
             <td>{{ $record->payment_amount }}</td>
-            <td>{{ $record->BookedDate }}</td>
-            <td>{{ $record->EndDate }}</td>
+            <td>{{ $record->booked_start_date }}</td>
+            <td>{{ $record->booked_end_date }}</td>
             <td>{{ $record->History }}</td>
             <td><button class="remover submit btn-danger"><i class="fas fa-trash"></i>Remove</button></td>
             <td><a href="{{ route('bookingrooms.show',$record->booking_room_id) }}"><button class="view submit btn-primary"><i class="fa fa-eye"></i>View</button></a></td>

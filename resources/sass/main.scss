@@ -535,6 +535,27 @@ p{
 .endbooking{
     margin-left:99px;
 }
+// available rooms
+.available-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.available-box{
+    padding:50px;
+    width:300px;
+    background:whitesmoke;
+    border-radius:10px;
+    box-shadow: 5px 10px rgb(124, 121, 121);
+    transition: transform 250ms;
+}
+.available-box h1{
+    font-size:30px;
+}
+.available-box:hover{
+    transform: translateY(-10px);
+}
+
 
   @media screen and (max-width: 700px) {
     .sidebar {
@@ -593,7 +614,8 @@ p{
         display:flex;
     }
     .searched-customer input,
-    .searched-guest input{
+    .searched-guest input,
+    .searched-room input{
         width:200px;
     }
     .buttons{
@@ -665,6 +687,20 @@ p{
         position:absolute;
         margin-top:413px;
         margin-left:-350px;
+    }
+    // show room
+    .updateroom-container-one{
+        position:absolute;
+        margin-top:240px;
+    }
+    // facilities
+    .facility-input input,
+    .facility-input select{
+        width:300px;        
+    }
+    .available-box{
+        width:300px;
+        margin:10px;
     }
   }
     

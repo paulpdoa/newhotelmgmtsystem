@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="insert-booking-container-main">
+    <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <h1>Booking Confirmation</h1>
     <form class="insert-booking-container" action="{{ route('bookingrooms.store') }}" method="POST">
         @csrf

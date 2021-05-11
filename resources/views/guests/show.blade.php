@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="insert-guest-container-main">
+    <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <h1>Guest Information</h1>
     <p>Please fill in the following</p>
     <form class="insert-guest-container" action="{{ route('guests.update') }}"  method="POST">

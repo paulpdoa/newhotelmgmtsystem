@@ -107,6 +107,9 @@ Route::get('/bookings/{id}',[BookingController::class,'show'])->name('bookings.s
 
 Route::get('/bookingrooms',[BookingRoomController::class,'index'])->name('bookingrooms.index');
 
+// available room
+Route::get('/availablerooms',[BookingRoomController::class,'available'])->name('availablerooms.index');
+
 Route::get('/bookingrooms/search',[BookingRoomController::class,'search'])->name('bookingrooms.search');
 
 Route::post('/bookingrooms',[BookingRoomController::class,'store'])->name('bookingrooms.store');
@@ -134,6 +137,7 @@ Route::get('/roomfacilities/{id}',[RoomFacilityController::class,'show'])->name(
 Route::get('/paymentmethods',[PaymentMethodController::class,'create'])->name('paymentmethods.create');
 
 Route::post('/paymentmethods',[PaymentMethodController::class,'store'])->name('paymentmethods.store');
+
 // download pdf
 
 Route::get('/customerpdf',[UserController::class,'customer'])->name('pdfreports.customer');

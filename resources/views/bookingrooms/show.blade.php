@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="booking-room-container-main">
+    <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <h1>Checked In Customer</h1>
     <input type="hidden" name="bookingid" value="{{ $bookingroom->booking_room_id }}">
 

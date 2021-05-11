@@ -34,8 +34,7 @@ class BookingRoomController extends Controller
         $records = DB::select(
             "SELECT concat(c.first_name,' ',c.last_name) as customername
             ,concat(g.first_name,' ',g.last_name) as guestname,br.booking_room_id as booking_room_id,
-            rt.room_type,pm.payment_method,p.payment_amount,date_format(b.booked_start_date,'%M %D %Y') as BookedDate,
-            date_format(b.booked_end_date,'%M %D %Y') as EndDate,
+            rt.room_type,pm.payment_method,p.payment_amount,b.booked_start_date,b.booked_end_date,
             CASE 
                 WHEN b.booked_start_date < CURDATE() THEN 'Archive'
                 WHEN b.booked_start_date > CURDATE() THEN 'Future'
@@ -129,6 +128,21 @@ class BookingRoomController extends Controller
         $bookingroom->delete();
 
         return redirect('/')->with('mssg','Customer left the hotel' . ' at ' . $time . ' on ' . $today);
+    }
+    public function available(){
+
+        $availables = DB::select("
+        SELECT rt.room_type,br.room_id,r.room_id,
+            CASE 
+                WHEN br.room_id THEN 'Occupied'
+                ELSE 'Vacant'
+            END AS Vacancy
+            FROM booking_rooms br right join rooms r using(room_id) right join room_types rt using(room_type_id)
+        ");
+
+        return view('availablerooms.index',[
+            'availables' => $availables
+        ]);
     }
 
    
