@@ -511,7 +511,7 @@ div.content-container {
 }
 
 .nav-button {
-  display: none;
+  display: block;
 }
 
 .login-logout {
@@ -550,47 +550,30 @@ div.content-container {
     width: 100%;
     height: auto;
     position: relative;
+    display: none;
   }
 
   .sidebar a {
     float: left;
   }
 
-  div.content {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .sidebar {
-    display: none;
-  }
-
   div.content-container {
     margin-left: auto;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
+  .menu {
+    display: block;
+    border: 1px solid #d8d2d2;
+    border-radius: 10px;
+    padding: 10px;
   }
 
   .nav-button {
-    background: #d7e2f0;
-    background: radial-gradient(circle, #d7e2f0 9%, #5b6662 33%, #dbd9d9 65%, #9ea7bf 85%);
+    background: whitesmoke;
     border-radius: 10px;
-    margin-top: 200px;
-    margin-left: 25px;
-    width: 400px;
+    width: 95%;
     position: absolute;
-    display: none;
+    margin-top: 200px;
   }
 
   .nav-button li {
@@ -608,20 +591,20 @@ div.content-container {
     cursor: pointer;
   }
 
-  .menu {
-    display: block;
-    border: 1px solid #d1c5c5;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .user {
-    color: black;
+  .count-body {
+    width: 360px;
   }
+}
 
-  .logout {
-    margin-right: 100px;
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
   }
 }
 

@@ -44,7 +44,7 @@
         <div class="username">
             <div class="user-container">
                 @else
-                <h5 class="user"><i class="fas fa-user"></i>{{ Auth::user()->name }}</h5>
+                <h5 class="user"><i class="fas fa-user"></i> {{ Auth::user()->name }} <i class="fas fa-caret-down"></i></h5>
             </div>
             <div class="logout">
                 <form action="{{ route('logout') }}" method="POST">

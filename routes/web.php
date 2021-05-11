@@ -83,9 +83,9 @@ Route::post('/rooms/update',[RoomController::class,'update'])->name('rooms.updat
 
 Route::get('/rooms/search',[RoomController::class,'search'])->name('rooms.search');
 
-Route::delete('/rooms/{id}',[RoomController::class,'destroy'])->name('rooms.destroy');
-
 Route::get('/rooms/{id}',[RoomController::class,'show'])->name('rooms.show');
+
+Route::delete('/rooms/{id}',[RoomController::class,'destroy'])->name('rooms.destroy');
 
 // Bookings
 Route::get('/bookings',[BookingController::class,'index'])->name('bookings.index');
