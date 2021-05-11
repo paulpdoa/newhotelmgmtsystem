@@ -7,7 +7,7 @@
         <div class="searched-room">
             <form action="{{ route('roomfacilities.search') }}" method="GET">
                 <input class="search-box" type="text" name="search-roomfacility" placeholder="Enter a room name to search">
-                <input class="submit btn-light" type="submit" value="Search">
+                <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>
             </form>
             <div class="buttons">
                 <a class="submit btn-light" href="{{ route('pdfreports.roomfacility') }}">Download PDF</a>
@@ -30,8 +30,8 @@
                 <td>{{ $room->room_type }}</td>
                 <td>{{ $room->facility_details }}</td>
                 <td>{{ $room->facility_description }}</td>  
-                <td><button class="remover submit btn-light">Remove</button></td>
-                <td><a class="view-room" href="{{ route('roomfacilities.show',$room->room_facility_id) }}"><button style="width:55%;" class="submit btn-light">View</button></a></td>
+                <td><button class="remover submit btn-danger"><i class="fas fa-trash"></i>Remove</button></td>
+                <td><a class="view-room" href="{{ route('roomfacilities.show',$room->room_facility_id) }}"><button class="view submit btn-primary"><i class="fa fa-eye"></i>View</button></a></td>
             </tr>
             @endforeach
         </tbody>

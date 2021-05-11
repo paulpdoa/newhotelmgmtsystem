@@ -12,7 +12,7 @@
         <div class="guest-input-container row-one">
             <div class="guest-input">               
                 <label for="title">Title</label><br/>
-                <input style="width:650px;" type="text" name="title" value="{{$guests->title}}" required>
+                <input class="guest-title" type="text" name="title" value="{{$guests->title}}" required>
             </div>
         </div>
         <div class="guest-input-container row-two">
@@ -28,7 +28,7 @@
         <div class="guest-input-container row-three">
             <div class="guest-input">
                 <label for="dateofbirth">Date of Birth</label><br/>
-                <input style="width:650px;" type="date" name="dateofbirth" value="{{$guests->date_of_birth}}">
+                <input class="guest-dob" type="date" name="dateofbirth" value="{{$guests->date_of_birth}}">
             </div>
         </div>
         <div class="guest-input-container row-four">

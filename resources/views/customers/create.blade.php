@@ -9,7 +9,7 @@
         <div class="customer-input-container row-one">
             <div class="customer-input">
                 <label for="title">Title</label><br/>
-                <input required style="width:945px" type="text" name="title" placeholder="Enter Profession" required>
+                <input class="customer-title" type="text" name="title" placeholder="Enter Profession" required>
             </div>
         </div>
         <div class="customer-input-container row-two">
@@ -62,10 +62,10 @@
             </div>
             <div class="customer-input">
                 <label for="email">Email Address</label><br/>
-                <input required style="width:50vw;" type="email" name="email" placeholder="Enter Email Address">
+                <input class="customer-email" required type="email" name="email" placeholder="Enter Email Address">
             </div>
         </div>
-        <button class="submit btn-success"><i class='far fa-hand-point-right'></i>Insert</button>
+        <button class="submit btn-success customer-insert"><i class='far fa-hand-point-right'></i>Insert</button>
     </form>
 </div>
 

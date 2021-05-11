@@ -33,7 +33,7 @@
                 <input type="text" name="facilitydetail" placeholder="Enter facility detail" required>
             </div>
         </div>
-        <input type="submit" value="Add to Facilities" class="submit btn-light add-facility">
+        <button style="width:200px;" class="facility-add submit btn-success"><i class='far fa-hand-point-right'></i>Add to Facility</button>
 
     </form>
 </div>

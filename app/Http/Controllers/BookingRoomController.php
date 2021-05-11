@@ -123,10 +123,12 @@ class BookingRoomController extends Controller
 
     public function destroy($id){
         $bookingroom = BookingRoom::findOrFail($id);
-
+        $today = today()->format('Y-m-d');
+        // get time now
+        $time = now()->format('h:i:s');
         $bookingroom->delete();
 
-        return redirect('/')->with('mssg','Customer left the hotel');
+        return redirect('/')->with('mssg','Customer left the hotel' . ' at ' . $time . ' on ' . $today);
     }
 
    

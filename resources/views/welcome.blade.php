@@ -51,40 +51,24 @@
               </div> 
             </div>
           </a>
-     
-        {{-- <div class="card-group">
-            <div class="card border border-primary">
-              <div class="card-body">
-                <h5 class="card-title">Customer</h5>
-                <strong><p class="counter card-text" data-target="{{ $customerCount }}" >0</p></strong>
+          <a href="{{ route('paymentmethods.create') }}">
+            <div class="count-body">
+              <img class="count-image" src="/img/payment.png" alt="payment">
+              <div class="counts">
+                <h5 class="card-title">Add More Payment Method</h5>
+                <strong><p class="counter card-text" data-target="{{ $paymentmethod }}">0</p></strong> 
+              </div> 
+            </div>
+          </a>
+          <a href="">
+            <div class="count-body">
+              <img class="count-image" src="/img/availableroom.png" alt="availableroom">
+              <div class="counts">
+                <h5 class="card-title">Available Rooms</h5>
+                <strong><p class="counter card-text" data-target="{{ $availableroom }}" >0</p></strong>
               </div>
             </div>
-            <div class="card border border-warning">
-              <div class="card-body">
-                <h5 class="card-title">Guest</h5>
-                <strong><p class="counter card-text" data-target="{{ $guestCount }}">0</p></strong>              
-              </div>
-            </div>
-            <div class="card border border-success">
-              
-              <div class="card-body">
-                <h5 class="card-title">Room</h5>
-                <strong><p class="counter card-text" data-target="{{ $roomCount }}">0</p></strong>              
-              </div>
-            </div>
-            <div class="card border border-danger"> 
-                <div class="card-body">
-                  <h5 class="card-title">Booking</h5>
-                  <strong><p class="counter card-text" data-target="{{ $bookingroomCount }}">0</p></strong>             
-                </div>
-              </div>
-              <div class="card border border-danger"> 
-                <div class="card-body">
-                  <h5 class="card-title">Guest Booked</h5>
-                  <strong><p class="counter card-text" data-target="{{ $guestbooking }}">0</p></strong>             
-                </div>
-              </div>
-          </div> --}}
+          </a>
         </div>
         
         <script>

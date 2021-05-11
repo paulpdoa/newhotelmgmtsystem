@@ -12,7 +12,7 @@
         <div class="customer-input-container row-one">
             <div class="customer-input">
                 <label for="title">Title</label><br/>
-                <input style="width:945px" type="text" name="title" value="{{$customer->title}}" required>
+                <input class="customer-title" type="text" name="title" value="{{$customer->title}}" required>
             </div>
         </div>
         <div class="customer-input-container row-two">
@@ -65,7 +65,7 @@
             </div>
             <div class="customer-input">
                 <label for="email">Email Address</label><br/>
-                <input style="width:50vw;" type="email" name="email" value="{{$customer->email}}">
+                <input class="customer-email" type="email" name="email" value="{{$customer->email}}">
             </div>
         </div>
         <div class="update-container">

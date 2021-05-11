@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomFacilityController;
 use App\Http\Controllers\UserController;
@@ -17,7 +18,7 @@ use App\Models\Room;
 use App\Models\Guest;
 use App\Models\Booking;
 use App\Models\BookingRoom;
-use App\Models\RoomFacility;
+use App\Models\PaymentMethod;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::get('/', function () {
         'roomCount' => Room::count(),
         'bookingroomCount' => Booking::count(),
         'guestbooking' => BookingRoom::count('guest_id'),
+        'paymentmethod' => PaymentMethod::count(),
+        'availableroom' => Room::max('room_id') - BookingRoom::count('room_id'),
         ]);
 });
 // Customer Controller
@@ -83,9 +86,9 @@ Route::post('/rooms/update',[RoomController::class,'update'])->name('rooms.updat
 
 Route::get('/rooms/search',[RoomController::class,'search'])->name('rooms.search');
 
-Route::get('/rooms/{id}',[RoomController::class,'show'])->name('rooms.show');
-
 Route::delete('/rooms/{id}',[RoomController::class,'destroy'])->name('rooms.destroy');
+
+Route::get('/rooms/{id}',[RoomController::class,'show'])->name('rooms.show');
 
 // Bookings
 Route::get('/bookings',[BookingController::class,'index'])->name('bookings.index');
@@ -127,7 +130,10 @@ Route::post('/roomfacilities',[RoomFacilityController::class,'store'])->name('ro
 
 Route::get('/roomfacilities/{id}',[RoomFacilityController::class,'show'])->name('roomfacilities.show');
 
+// payment method
+Route::get('/paymentmethods',[PaymentMethodController::class,'create'])->name('paymentmethods.create');
 
+Route::post('/paymentmethods',[PaymentMethodController::class,'store'])->name('paymentmethods.store');
 // download pdf
 
 Route::get('/customerpdf',[UserController::class,'customer'])->name('pdfreports.customer');

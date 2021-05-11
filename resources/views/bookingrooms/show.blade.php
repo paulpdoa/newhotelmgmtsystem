@@ -17,7 +17,6 @@
                 <label for="guestname">Guest Name</label><br/>
                 <input type="text" name="" value="{{$bookingroom->guestname}} {{$bookingroom->guestsurname}}">
             </div>
-            
         </div>
         <div class="booking-room-input row-two">
             <div class="bookingroom-input">
@@ -39,11 +38,11 @@
                 <input type="date" name="" value="{{$bookingroom->booked_start_date}}">
             </div>
         </div>
-        {{-- <form class="deletebookingroom-form" action={{ route('bookingrooms.destroy', $bookingroom->booking_room_id) }} method="POST">
+        <form class="deletebookingroom-form" action={{ route('bookingrooms.destroy', $bookingroom->booking_room_id) }} method="POST">
             @csrf
             @method('DELETE')
-            <input type="submit" class="submit deletebookingroom-btn" value="Delete">
-        </form> --}}
+            <button style="width:200px;" class="endbooking submit delete-btn delete delete-booking"><i class="fas fa-trash"></i>End Booking</button>
+        </form>
     </div>
 </div>
 @endsection

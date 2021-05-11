@@ -7,8 +7,7 @@
 }
 body {
     font-family: 'Mulish', sans-serif;
-    background: rgb(190,205,227);
-    background: linear-gradient(193deg, rgba(190,205,227,1) 13%, rgba(145,193,219,1) 60%);
+    background: linear-gradient(to right, #ffff99 0%, #336699 100%);
     margin: 0;
 }
 .table{
@@ -46,7 +45,6 @@ body {
 .table th,.table td{
     text-align: center;
     padding:5px;
-    width:100px;
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -74,7 +72,19 @@ tr:nth-child(even) {
 .card-text{
     font-size:25px;
 }
-
+// inputs
+.customer-input .customer-title{
+    width:940px;
+}
+.customer-input .customer-email{
+    width:635px;
+}
+.guest-input .guest-title{
+    width:640px;
+}
+.guest-input .guest-dob{
+    width:640px;
+}
 .customers-info input{
     border:1px solid black;
     padding:5px;
@@ -140,11 +150,18 @@ tr:nth-child(even) {
     margin:0 auto;
 }
 
-h1,p{
+h1{
     text-align: center;
     color:black;
     text-transform: uppercase;
-    font-weight:900;
+    font-size:45px;
+    font-weight:bolder;
+}
+p{
+    text-align: center;
+    color:black;
+    text-transform: uppercase;
+    font-weight:bolder;
 }
 .insert-customer-container,
 .insert-room-container,
@@ -167,6 +184,7 @@ h1,p{
     outline:none;
     padding:5px;
 }
+
 .row-one,
 .row-two,
 .row-three,
@@ -176,11 +194,13 @@ h1,p{
     display:flex;
 }
 // customer table
-.customers-main-container,
+.customers-main-container{
+    margin:0 auto;
+    margin-top:-50px;
+}
 .guests-main-container{
     margin:0 auto;
-    position:absolute;
-    top:70px;
+    margin-top:-10px;
 }
 // guests form
 .insert-guest-container-main,
@@ -232,6 +252,7 @@ h1,p{
   .sidebar a {
     display: block;
     color: black;
+    font-weight:bolder;
     padding: 16px;
     border-bottom:1px solid rgb(228, 220, 220);
     text-decoration: none;
@@ -249,8 +270,9 @@ h1,p{
 
   .sidebar a.active {
     text-transform:uppercase;
-    font-weight:bold;
-    background:rgb(227, 243, 242);
+    color:white;
+    font-weight:bolder;
+    background: linear-gradient(to bottom, #ccffff 0%, #336699 100%);
   }
   
   .sidebar a:hover:not(.active) {
@@ -266,13 +288,13 @@ h1,p{
     height: 100vh;
     
   }
-//   buttons update and delete
+//   buttons and delete
 .delete-form{
     position:absolute;
 }
 .delete-btn{
     position:absolute;
-    margin-top:478px;
+    margin-top:490px;
     margin-left:290px;
 }
 .update-container{
@@ -281,12 +303,15 @@ h1,p{
     margin-left:500px;
 }
 .delete-guest{
-    margin-top:520px;
+    margin-top:531px;
     margin-left:400px;
 }
 .delete-booking{
     margin-top:2px;
     
+}
+.facility-add{
+    margin:5px;
 }
 // for guest buttons and delete
 .updateguest-container{
@@ -305,7 +330,7 @@ h1,p{
 // for bookings buttons
 .confirm-booking{
     position:absolute;
-    margin-top:470px;
+    margin-top:460px;
     margin-left:50px;
 }
 .deletebooking-form{
@@ -326,7 +351,7 @@ h1,p{
 // delete and update for room
 .updateroom-container-one{
     position:absolute;
-    margin-top:250px;
+    margin-top:251px;
 }
 .updateroom-container-one .update{
     width:150px;
@@ -343,7 +368,7 @@ h1,p{
 .deleteroom-form{
     position:absolute;
     margin-top:-177px;
-    margin-left:250px;
+    margin-left:232px;
 }
 .deleteroom-btn{
     width:150px;
@@ -449,31 +474,32 @@ h1,p{
 }
 // navigation
 .navbar{
-    background:#F4FAFF;
+    background: linear-gradient(to bottom, #ccffff 0%, #336699 100%);
     padding:10px;
     display:flex;
     justify-content: flex-end;
 }
 .nav-button{
-    display:block;
+    display:none;
 }
 .login-logout{
-    display:flex;
+    display:flex;   
+    
 }
 .menu{
     display:none;
 }
 .login-container,
 .logout-container{
-    padding:10px;
+    padding:5px;
 }
 .login-container a,
 .logout-container a{
     text-decoration:none;
-    color:black;
+    color:white;
 }
 .user {
-    color:black;
+    color:white;
     cursor: pointer;
 }
 .logout{
@@ -482,6 +508,34 @@ h1,p{
     margin-top:70px;
     margin-left:20px;
 }
+// payment method container
+.payment-main-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.payment-subcontainer{
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+    align-self: center;
+    margin:0 auto;
+}
+.payment-input {
+    margin:8px;
+}
+.payment-input input {
+    padding:6px;
+    width:300px;
+    border-radius:3px;
+    border:1px solid rgb(219, 216, 216);
+    outline:none;
+}
+//booking room
+.endbooking{
+    margin-left:99px;
+}
+
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
@@ -507,6 +561,9 @@ h1,p{
         width:95%;
         position:absolute;
         margin-top:200px;
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
     }
     .nav-button li {
     list-style: none;
@@ -527,6 +584,87 @@ h1,p{
     }
     .count-body{
         width:360px;
+    }
+    .deleteroom-form{
+        margin-left:-100px;
+        margin-top:-134px;
+    }
+    .searched-customer{
+        display:flex;
+    }
+    .searched-customer input,
+    .searched-guest input{
+        width:200px;
+    }
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    .buttons a{
+        font-size:12px;
+    }
+    // searchbox
+    .searchbox{
+        
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    // insert customer
+    .insert-customer-container{
+        display:flex;
+        justify-content: center;
+        width:350px;
+        margin-left:20px;
+    }
+    .customer-input input {
+        width:300px;
+    }
+    .row-one,.row-two,.row-three,.row-four,.row-five,.row-six{
+        display:flex;
+        flex-direction:column;
+    }
+    .customer-input .customer-title{
+        width:300px;
+    }
+    .customer-input .customer-email{
+        width:300px;
+    }
+    .customer-insert{
+        margin-left:-40px;
+    }
+    // show customer
+    .update-container{
+        position:absolute;
+        margin-top:1010px;
+        margin-left:180px;
+    }
+    .delete-form{
+        position: absolute;
+        margin-top:617px;
+        margin-left:-220px;
+    }
+    // guest insert
+    .guest-input input{
+        width:310px;
+    }
+    .guest-input .guest-title{
+        width:310px;
+    }
+    .guest-input .guest-dob{
+        width:310px;
+    }
+    // show guest
+    .updateguest-container{
+        position:absolute;
+        margin-top:790px;
+        margin-left:200px;
+    }
+    .deleteguest-form{
+        position:absolute;
+        margin-top:413px;
+        margin-left:-350px;
     }
   }
     

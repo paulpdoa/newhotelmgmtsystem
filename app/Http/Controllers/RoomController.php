@@ -52,31 +52,32 @@ class RoomController extends Controller
 // using request needs the name tag from html
 // insert the price to room prices table
 // insert the description in room bands table
-        $rooms = Room::join('room_types','rooms.room_type_id','=','room_types.room_type_id')
-                ->join('room_prices','rooms.room_price_id','=','room_prices.room_price_id')
-                    ->join('room_bands','rooms.room_band_id','=','room_bands.room_band_id')
-                        ->select('rooms.room_id','room_types.room_type','room_prices.room_price','room_bands.room_description')
-                            ->findOrFail($req->id);
+        $rooms = Room::findOrFail($req->id);
+
         $roomDesc = RoomBand::findOrFail($req->roombandid);
         $roomType = RoomType::findOrFail($req->roomtypeid);
         $roomPrice = RoomPrice::findOrFail($req->roompriceid);
 
-        $facilityDesc = FacilityList::findOrFail($req->facilityid);
-        $facilityDetail = RoomFacility::findOrFail($req->roomfacilityid);
+        // $facilityDesc = FacilityList::findOrFail($req->facilityid);
+        // $facilityDetail = RoomFacility::findOrFail($req->roomfacilityid);
+        
         // insert rooms
         $roomType->room_type = $req->roomtype;
         $roomPrice->room_price = $req->roomprice;
         $roomDesc->room_description = $req->roomdescription;
+
         // insert facilities
-        $facilityDesc->facility_description = $req->facilitydesc;
-        $facilityDetail->facility_details = $req->facilitydetail;
+        // $facilityDesc->facility_description = $req->facilitydesc;
+        // $facilityDetail->facility_details = $req->facilitydetail;
 
         $roomDesc->save();
         $roomType->save();
         $roomPrice->save();
 
-        $facilityDesc->save();
-        $facilityDetail->save();
+        // $facilityDesc->save();
+        // $facilityDetail->save();
+
+        $rooms->save();
 
         return redirect('/')->with('mssg','Room has been updated successfully!');
     }

@@ -54,7 +54,7 @@
             </div>
         </div>
         @endguest
-        <i style="color:black;" class="fas fa-bars menu"></i>
+        <i style="color:white;" class="fas fa-bars menu"></i>
         <div class="nav-button">
             <ul>
                 <li><a href="/"><i class="fas fa-home"></i>Home</a></li>

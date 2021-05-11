@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="confirm-booking">
-            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
+            <button class="submit update"><i class="fa fa-edit"></i>Book Now</button>
         </div>
         
     </form>

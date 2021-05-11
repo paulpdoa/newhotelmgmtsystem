@@ -34,7 +34,7 @@
                 <input type="text" name="facilitydescription" placeholder="Enter Facility Description" required>
             </div>
         </div>
-        <input type="submit" value="Add Room" class="submit">
+        <button class="facility-add submit btn-success"><i class='far fa-hand-point-right'></i>Add Room</button>
     </form>
 </div>
 

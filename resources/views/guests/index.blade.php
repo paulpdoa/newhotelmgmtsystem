@@ -5,7 +5,7 @@
     <h1>Guest Record</h1>
     <p>records of guest in hotel</p>
     <div class="searched-guest">
-        <form action="{{ route('guests.search')}}" method="GET">
+        <form class="searchbox" action="{{ route('guests.search')}}" method="GET">
             <input class="search-box" type="text" name="search-guest" placeholder="Enter a name to search">
             <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>
             

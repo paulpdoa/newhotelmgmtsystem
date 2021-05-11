@@ -9,7 +9,7 @@
         <div class="guest-input-container row-one">
             <div class="guest-input">               
                 <label for="title">Title</label><br/>
-                <input required style="width:650px;" type="text" name="title" placeholder="Enter Profession" required>
+                <input class="guest-title" type="text" name="title" placeholder="Enter Profession" required>
             </div>
         </div>
         <div class="guest-input-container row-two">
@@ -25,7 +25,7 @@
         <div class="guest-input-container row-three">
             <div class="guest-input">
                 <label for="dateofbirth">Date of Birth</label><br/>
-                <input required style="width:650px;" type="date" name="dateofbirth">
+                <input required class="guest-dob" type="date" name="dateofbirth">
             </div>
         </div>
         <div class="guest-input-container row-four">
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <input class="submit" type="submit" value="Submit">
+        <button class="submit btn-success"><i class='far fa-hand-point-right'></i>Insert</button>
     </form>
 </div>
 

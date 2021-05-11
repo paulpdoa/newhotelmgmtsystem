@@ -18,7 +18,7 @@
     <h1>Customer Record</h1>
     <p>records of customer in hotel</p>
     <div class="searched-customer">
-        <form action="{{ route('customers.search') }}" method="GET">
+        <form class="searchbox" action="{{ route('customers.search') }}" method="GET">
             <input class="search-box" type="text" name="search-customer" placeholder="Enter a name to search">
             <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>
             

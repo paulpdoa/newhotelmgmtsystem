@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="insert-room-container-main">
@@ -38,25 +37,6 @@
             <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
     </form>
-
-    {{-- a form for passing the data to room facilities
-    <form action="{{ route('roomfacility.store') }}" method="POST">
-        @csrf
-        <div class="room-input-container row-three">
-            <div class="room-input">
-                <label for="facilitydesc">Facility Description</label><br/>
-                <input type="text" name="facilitydesc" value="{{ $rooms->facility_description }}"> 
-            </div>
-        </div>
-        <div class="room-input-container row-three">
-            <div class="room-input">
-                <label for="facilitydetail">Facility Details</label><br/>
-                <input type="text" name="facilitydetail" value="{{ $rooms->facility_details }}"> 
-            </div>
-        </div>
-
-        <input class="submit btn-light deleteroom-btn" type="submit" value="Add to Facilities">
-    </form> --}}
 
     <form class="deleteroom-form" action={{ route('rooms.destroy', $rooms->room_id) }} method="POST">
         @csrf

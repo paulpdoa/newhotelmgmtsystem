@@ -6,11 +6,11 @@
 <div class="searched-room">
     <form action="{{ route('bookingrooms.search') }}" method="GET">
         <input class="search-box" type="text" name="search-bookingroom" placeholder="Enter a name to search">
-        <input class="submit btn-light" type="submit" value="Search">   
+        <button class="submit btn-info"><i class="fa fa-search"></i>Search</button>   
     </form>
     <div class="buttons">
         <a class="submit btn-light" href="{{ route('pdfreports.bookingroom') }}">Download PDF</a>
-        <a class="submit btn-light" href="{{ route('bookingrooms.index') }}">Refresh</a>
+        <a class="submit btn-light" href="{{ route('bookingrooms.index') }}">Back to List</a>
     </div>
 </div>
 <div class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -37,8 +37,8 @@
             <td>{{ $record->BookedDate }}</td>
             <td>{{ $record->EndDate }}</td>
             <td>{{ $record->History }}</td>
-            <td><button class="remover submit btn-light">Remove</button></td>
-            <td><a href="{{ route('bookingrooms.show',$record->booking_room_id) }}"><button class="show submit btn-light">View</button></a></td>
+            <td><button class="remover submit btn-danger"><i class="fas fa-trash"></i>Remove</button></td>
+            <td><a href="{{ route('bookingrooms.show',$record->booking_room_id) }}"><button class="view submit btn-primary"><i class="fa fa-eye"></i>View</button></a></td>
         </tr>
         @endforeach
     </thead>
