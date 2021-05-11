@@ -616,6 +616,7 @@ div.content-container {
   width: 300px;
   background: whitesmoke;
   border-radius: 10px;
+  margin: 10px;
   box-shadow: 5px 10px #7c7979;
   transition: transform 250ms;
 }

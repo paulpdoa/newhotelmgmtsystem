@@ -8,6 +8,11 @@ use App\Models\PaymentMethod;
 
 class PaymentMethodController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function create(){
         return view('paymentmethods.create');
     }
