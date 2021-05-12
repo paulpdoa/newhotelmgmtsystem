@@ -52,18 +52,6 @@
                 <img src="/img/css.png" alt="css">
             </div>     
         </div>
-        <div class="about-box">
-            <div class="about-img">
-                <img src="/img/bootstrap.png" alt="bootstrap">
-            </div>
-            <div class="about-info">
-               <h2>Bootstrap is a free and open-source CSS framework<br> 
-                   directed at responsive, mobile-first front-end web<br> 
-                   development. It contains CSS- and JavaScript-based<br> 
-                   design templates for typography, forms, buttons, navigation,<br>
-                   and other interface components.</h2>
-            </div>
-        </div>
     </div>
 </div>
 @endsection

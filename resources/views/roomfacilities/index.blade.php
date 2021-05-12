@@ -11,7 +11,7 @@
             </form>
             <div class="buttons">
                 <a class="submit btn-light" href="{{ route('pdfreports.roomfacility') }}">Download PDF</a>
-                <a class="submit btn-light" href="{{ route('roomfacilities.index') }}">Refresh</a>
+                <a class="submit btn-light" href="{{ route('roomfacilities.index') }}">Back to List</a>
             </div>
         </div>
         <div class="table-wrapper-scroll-y my-custom-scrollbar">

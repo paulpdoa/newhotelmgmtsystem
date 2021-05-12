@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="updateroom-container">
-            <input type="submit" value="Update" class="submit update btn-light">
+            <button class="submit update"><i class="fa fa-edit"></i>Update</button>
         </div>
     </form>
     {{-- <form class="deletefacility-container" action="{{ route('roomfacilities.destroy',$room->facility_id) }}">
