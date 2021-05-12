@@ -781,6 +781,10 @@ div.content-container {
 }
 
 @media screen and (max-width: 700px) {
+  .body {
+    position: relative;
+  }
+
   .sidebar {
     width: 100%;
     height: auto;
@@ -806,12 +810,11 @@ div.content-container {
   .nav-button {
     background: whitesmoke;
     border-radius: 10px;
-    width: 95%;
     position: absolute;
-    margin-top: 200px;
-    opacity: 1;
-    transform: rotateX(0deg);
-    transform-origin: top;
+    width: 100%;
+    left: 0;
+    top: 190%;
+    margin-top: -50px;
   }
 
   .nav-button li {
@@ -994,12 +997,16 @@ div.content-container {
   }
 
   .about-info h2 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bolder;
   }
 
   .about-img img {
     width: 150px;
+  }
+
+  .about-box {
+    margin: 0;
   }
 
   .contact-subcontainer {

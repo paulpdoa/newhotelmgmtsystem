@@ -690,6 +690,9 @@ p{
     border:1px solid rgb(184, 171, 171);
 }
   @media screen and (max-width: 700px) {
+      .body{
+          position:relative;
+      }
     .sidebar {
       width: 100%;
       height: auto;
@@ -711,12 +714,11 @@ p{
     .nav-button {
         background:whitesmoke;
         border-radius:10px;
-        width:95%;
         position:absolute;
-        margin-top:200px;
-        opacity: 1;
-        transform: rotateX(0deg);
-        transform-origin: top;
+        width:100%;
+        left:0;
+        top: 190%;
+        margin-top: -50px;
     }
     .nav-button li {
     list-style: none;
@@ -870,11 +872,14 @@ p{
     }
     // about us page
     .about-info h2{
-        font-size:13px;
+        font-size:15px;
         font-weight:bolder;
     }
     .about-img img {
         width:150px;
+    }
+    .about-box{
+        margin:0;
     }
     // contact
     .contact-subcontainer{
