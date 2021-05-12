@@ -2,7 +2,7 @@
 @section('content')
 
         <div class="content">
-           <h1>Hotel Management Records</h1>
+           <h1 class="title">Hotel Management Records</h1>
            <p>{{ session('mssg') }}</p>
         </div>
       <div class="count-container">

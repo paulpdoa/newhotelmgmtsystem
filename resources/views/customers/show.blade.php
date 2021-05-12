@@ -3,7 +3,7 @@
 
 <div class="insert-customer-container-main">
     <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
-    <h1>Customer Information</h1>
+    <h1 class="title">Customer Information</h1>
     <p>Please fill in the following</p>
     <form class="insert-customer-container" action="{{ route('customers.update') }}"  method="POST">
         @csrf

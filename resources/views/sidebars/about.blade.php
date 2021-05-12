@@ -2,7 +2,7 @@
 @section('content')
 <div class="about-container-main">
     <div class="about-subcontainer">
-        <h1>Used in Developing this System</h1>
+        <h1 class="title">Used in Developing the System</h1>
         <div class="about-box">
             <div class="about-info">
                <h2>PHP is a general-purpose scripting<br>

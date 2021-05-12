@@ -3,7 +3,7 @@
 
 <div class="guests-main-container">
     <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
-    <h1>Guest Record</h1>
+    <h1 class="title">Guest Record</h1>
     <p>records of guest in hotel</p>
     <div class="searched-guest">
         <form class="searchbox" action="{{ route('guests.search')}}" method="GET">
@@ -37,7 +37,7 @@
             <td>{{ $guest->title }}</td>
             <td>{{ $guest->first_name }}</td>
             <td>{{ $guest->last_name }}</td>
-            <td>{{ $guest->date_of_birth }}</td>
+            <td>{{ $guest->dob }}</td>
             <td>{{ $guest->street }} {{ $guest->town }}, {{ $guest->province }}</td>
             <td>{{ $guest->postal_code }}</td>
             <td>{{ $guest->contact_number }}</td>

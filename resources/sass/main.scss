@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 *{
     padding:0;
     margin:0;
@@ -6,8 +6,8 @@
     
 }
 body {
-    font-family: 'Mulish', sans-serif;
-    background: linear-gradient(to right, #ffff99 0%, #336699 100%);
+    font-family: 'Sanchez', serif;
+    background: url('img/background.png');
     margin: 0;
 }
 .table{
@@ -16,7 +16,7 @@ body {
 // scrollbar
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 10px;    
   }
   
   /* Track */
@@ -243,7 +243,9 @@ p{
     padding: 0;
     top:0;
     width: 210px;
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
     position: fixed;
     height: 100%;
     overflow: hidden;
@@ -273,11 +275,14 @@ p{
     color:white;
     font-weight:bolder;
     background: linear-gradient(to bottom, #ccffff 0%, #336699 100%);
+    border-radius:30px;
+    
   }
   
   .sidebar a:hover:not(.active) {
-    background-color: #555;
+    background: linear-gradient(to bottom, #3399ff 0%, #3399ff 100%);
     color: white;
+    transition:0.4s;
   }
   .card{
       display:flex;
@@ -444,7 +449,7 @@ p{
     flex-wrap: wrap;
 }
 .count-body {
-    background:rgb(243, 237, 237);
+    background:white;
     display:flex;
     justify-content:space-evenly;
     padding:25px;
@@ -452,7 +457,7 @@ p{
     width:400px;
     height:200px;
     border-radius:10px;
-    box-shadow: 5px 10px rgb(124, 121, 121);
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.582);
     cursor:pointer;
     transition: transform 250ms;
 }
@@ -475,7 +480,7 @@ p{
 }
 // navigation
 .navbar{
-    background: linear-gradient(to bottom, #ccffff 0%, #336699 100%);
+    border-top-left-radius: 30px;
     padding:10px;
     display:flex;
     justify-content: flex-end;
@@ -574,8 +579,12 @@ p{
     display:flex;
     flex-direction: column;
 }
+// This will be the global title
+.title{
+    color:black;
+    
+}
 .about-box{
-    background:whitesmoke;
     border-radius:5px;
     height:300px;
     margin:10px;
@@ -603,7 +612,6 @@ p{
 .contact-box{
     display:flex;
     flex-direction:column;
-    background:whitesmoke;
     border-radius:5px;
     width:300px;
     padding:10px;
@@ -653,6 +661,34 @@ p{
     color:black;
     background:lightcyan;
 }
+// contact container
+.contact-us-container{
+    display:flex;
+    flex-direction: column;
+}
+.contact-form-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+    align-self: center;
+    border:1px solid rgb(148, 137, 137);
+    border-radius:5px;
+}
+.contact-input input{
+    width:300px;
+    outline:none;
+    padding:4px;
+    border-radius:5px;
+    border:1px solid rgb(184, 171, 171);
+}
+.contact-input textarea{
+    outline:none;
+    width:300px;
+    height:200px;
+    border-radius:5px;
+    border:1px solid rgb(184, 171, 171);
+}
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
@@ -696,6 +732,7 @@ p{
     cursor: pointer;
     }
     .navbar {
+        border-top-left-radius: 0;
         display:flex;
         justify-content:space-between;
     }
@@ -830,6 +867,22 @@ p{
         position:absolute;
         margin-top:944px;
         margin-left:-80px;
+    }
+    // about us page
+    .about-info h2{
+        font-size:13px;
+        font-weight:bolder;
+    }
+    .about-img img {
+        width:150px;
+    }
+    // contact
+    .contact-subcontainer{
+        display:flex;
+        flex-direction:column;
+    }
+    .contact-box{
+        align-self:center;
     }
   }
     

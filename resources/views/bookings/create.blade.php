@@ -5,7 +5,7 @@
     <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
     <form class="insert-booking-container" action="{{ route('bookings.store') }}" method="POST">
         @csrf
-        <h1>Create Bookings</h1>
+        <h1 class="title">Create Bookings</h1>
         <div class="booking-input-container row-one">
             <div class="booking-input">
                 <label for="customername">Customer Name</label><br/>

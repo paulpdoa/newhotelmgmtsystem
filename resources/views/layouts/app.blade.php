@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" href="img/favicon.ico"/>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-info bg-info">
         @guest
         <div class="login-logout">
             <div class="login-container">

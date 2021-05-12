@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
-<h1>List of Available Rooms</h1>
+<h1 class="title">List of Available Rooms</h1>
 <div class="available-container">
     
     @foreach($availables as $available)

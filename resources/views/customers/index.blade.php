@@ -16,7 +16,7 @@
     @endif
 <div class="customers-main-container">
     <a href="/"><button class="submit btn-success"><i class="fa fa-chevron-left"></i> Back</button></a>
-    <h1>Customer Record</h1>
+    <h1 class="title">Customer Record</h1>
     <p>records of customer in hotel</p>
     <div class="searched-customer">
         <form class="searchbox" action="{{ route('customers.search') }}" method="GET">

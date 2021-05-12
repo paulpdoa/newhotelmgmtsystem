@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="contact-container-main">
-    <h1>About the developers</h1>
+    <h1 class="title">About the developers</h1>
     <div class="contact-subcontainer">
         <div class="contact-box">
             <div class="about-me">
@@ -14,11 +14,11 @@
             </div>
             <div class="contact-socmed">
                 <div class="fb-box">
-                    <label for="fb">Facebook</label><br>
+                    <center><label for="fb">Facebook</label><br></center>
                     <a href="https://www.facebook.com/paulpdoa/"><button>@paulpdoa</button></a>
                 </div>
                 <div class="ig-box">
-                    <label for="ig">Instagram</label><br>
+                    <center><label for="ig">Instagram</label><br></center>
                     <a href="https://www.instagram.com/paulpdoa/"><button>@paulpdoa</button></a>
                 </div>
             </div>
@@ -34,15 +34,37 @@
             </div>
             <div class="contact-socmed">
                 <div class="fb-box">
-                    <label for="fb">Facebook</label><br>
+                    <center><label for="fb">Facebook</label><br></center>
                     <a href="https://www.facebook.com/renzomarko"><button>@ondyyyyyyyy</button></a>
                 </div>
                 <div class="ig-box">
-                    <label for="ig">Instagram</label><br>
+                    <center><label for="ig">Instagram</label><br></center>
                     <a href="https://www.instagram.com/ondyyyyyyyy/"><button>@ondyyyyyyyy</button></a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="contact-subcontainer-2">
+       <div class="contact-us-container">
+           <h1 class="title">Feel free to contact us!</h1>
+           <form class="contact-form-container" action="mailto:polopdoandres@gmail.com" method="POST">
+               <div class="contact-input">
+                <label for="fullname">Name</label><br>
+                <input type="text" name="fullname" placeholder="Enter your name" required>
+               </div>
+               <div class="contact-input">
+                  <label for="email">Email Address</label><br>
+                  <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="contact-input">
+                    <label for="message">Message</label><br>
+                    <textarea placeholder="Enter your message..." name="message">
+                        
+                    </textarea>
+                </div>
+                    <button class="submit btn-primary">Submit</button>
+           </form>
+       </div>
     </div>
 </div>
 
