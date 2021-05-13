@@ -7,7 +7,7 @@
 
 body {
   font-family: "Sanchez", serif;
-  background: url(/images/background.png?ca502cb653d80368ea2abf55ee950890);
+  background: url("/img/background.png");
   margin: 0;
 }
 
