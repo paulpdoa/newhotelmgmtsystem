@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PaymentMethod;
-
+use Illuminate\Support\Facades\DB;
 
 class PaymentMethodController extends Controller
 {
@@ -20,7 +20,7 @@ class PaymentMethodController extends Controller
         $payment = new PaymentMethod();
 
         $payment->payment_method = request('paymentmethod');
-
+        
         $payment->save();
 
         return redirect('/')->with('mssg','Payment Method has been added!');
