@@ -3,6 +3,7 @@
 
         <div class="content">
            <h1 class="title">Hotel Management Records</h1>
+           <p>Select Records Below</p>
            <p>{{ session('mssg') }}</p>
         </div>
       <div class="count-container">

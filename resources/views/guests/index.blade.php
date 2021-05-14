@@ -37,7 +37,7 @@
             <td>{{ $guest->title }}</td>
             <td>{{ $guest->first_name }}</td>
             <td>{{ $guest->last_name }}</td>
-            <td>{{ $guest->dob }}</td>
+            <td>{{ $guest->date_of_birth }}</td>
             <td>{{ $guest->street }} {{ $guest->town }}, {{ $guest->province }}</td>
             <td>{{ $guest->postal_code }}</td>
             <td>{{ $guest->contact_number }}</td>
