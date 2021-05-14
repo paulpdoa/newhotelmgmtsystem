@@ -137,7 +137,7 @@ class BookingRoomController extends Controller
             CASE 
                 WHEN br.room_id > 0 THEN 'Occupied'
                 ELSE 'Vacant'
-            END AS V
+            END vacant_room
             FROM booking_rooms br right join rooms r using(room_id) right join room_types rt using(room_type_id)
         ");
 
