@@ -37,7 +37,7 @@ class BookingRoomController extends Controller
             rt.room_type,pm.payment_method,p.payment_amount,to_char(b.booked_start_date,'Mon-dd-YYYY') as BookedDate,
             to_char(b.booked_end_date,'Mon-dd-YYYY') as EndDate,
             CASE 
-                WHEN b.booked_start_date < CURENT_DATE THEN 'Archive'
+                WHEN b.booked_start_date < CURRENT_DATE THEN 'Archive'
                 WHEN b.booked_start_date > CURRENT_DATE THEN 'Future'
                 ELSE 'Present'
             END AS History   
